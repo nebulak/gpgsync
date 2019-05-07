@@ -1,0 +1,47 @@
+# English (United Kingdom) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-05-07 22:29+0200\n"
+"PO-Revision-Date: 2019-05-07 22:34+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_GB\n"
+"Language-Team: en_GB <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: systray.py:37
+msgid "Show GPG Sync"
+msgstr "Show GPG Sync"
+
+#: systray.py:38
+msgid "Hide GPG Sync"
+msgstr "Hide GPG Sync"
+
+#: systray.py:42
+msgid "Version {}"
+msgstr "Version {}"
+
+#: systray.py:46
+msgid "Sync keylists"
+msgstr "Sync keylists"
+
+#: systray.py:49
+msgid "Check for updates"
+msgstr "Check for updates"
+
+#: systray.py:51
+msgid "Settings..."
+msgstr "Settings..."
+
+#: systray.py:54
+msgid "Quit"
+msgstr "Quit"

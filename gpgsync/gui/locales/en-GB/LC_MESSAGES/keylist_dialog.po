@@ -1,0 +1,83 @@
+# English (United Kingdom) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-05-07 22:27+0200\n"
+"PO-Revision-Date: 2019-05-07 22:33+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_GB\n"
+"Language-Team: en_GB <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: keylist_dialog.py:38
+msgid "Edit Keylist"
+msgstr "Edit Keylist"
+
+#: keylist_dialog.py:42
+msgid "Add Keylist"
+msgstr "Add Keylist"
+
+#: keylist_dialog.py:49
+msgid "Authority Key Fingerprint"
+msgstr "Authority Key Fingerprint"
+
+#: keylist_dialog.py:53
+msgid "Keylist Address"
+msgstr "Keylist Address"
+
+#: keylist_dialog.py:58
+msgid "Key server"
+msgstr "Key server"
+
+#: keylist_dialog.py:63
+msgid "Load URL through SOCKS5 proxy (e.g. Tor)"
+msgstr "Load URL through SOCKS5 proxy (e.g. Tor)"
+
+#: keylist_dialog.py:65
+msgid "Host"
+msgstr "Host"
+
+#: keylist_dialog.py:67
+msgid "Port"
+msgstr "Port"
+
+#: keylist_dialog.py:77
+msgid "Proxy Configuration"
+msgstr "Proxy Configuration"
+
+#: keylist_dialog.py:91
+msgid "Advanced Settings"
+msgstr "Advanced Settings"
+
+#: keylist_dialog.py:95
+msgid "Save"
+msgstr "Save"
+
+#: keylist_dialog.py:97
+msgid "Cancel"
+msgstr "Cancel"
+
+#: keylist_dialog.py:133
+msgid "Hide advanced settings"
+msgstr "Hide advanced settings"
+
+#: keylist_dialog.py:136
+msgid "Show advanced settings"
+msgstr "Show advanced settings"
+
+#: keylist_dialog.py:187
+msgid "Adding Keylist"
+msgstr "Adding Keylist"
+
+#: keylist_dialog.py:191
+msgid "Downloading keylist and authority key..."
+msgstr "Downloading keylist and authority key..."

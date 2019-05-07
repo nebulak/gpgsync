@@ -1,0 +1,63 @@
+# English (United Kingdom) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-05-07 22:28+0200\n"
+"PO-Revision-Date: 2019-05-07 22:34+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_GB\n"
+"Language-Team: en_GB <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: main_window.py:49
+msgid ""
+"GnuPG 2.x doesn't seem to be installed. Install your operating system's "
+"gnupg2 package."
+msgstr ""
+"GnuPG 2.x doesn't seem to be installed. Install your operating system's "
+"gnupg2 package."
+
+#: main_window.py:51
+msgid ""
+"GnuPG doesn't seem to be installed. Install <a "
+"href=\"https://gpgtools.org/\">GPGTools</a>."
+msgstr ""
+"GnuPG doesn't seem to be installed. Install <a "
+"href=\"https://gpgtools.org/\">GPGTools</a>."
+
+#: main_window.py:53
+msgid ""
+"GnuPG doesn't seem to be installed. Install <a "
+"href=\"http://gpg4win.org/\">Gpg4win</a>."
+msgstr ""
+"GnuPG doesn't seem to be installed. Install <a "
+"href=\"http://gpg4win.org/\">Gpg4win</a>."
+
+#: main_window.py:186
+msgid "Add First GPG Sync Keylist"
+msgstr "Add First GPG Sync Keylist"
+
+#: main_window.py:189
+msgid "Add Keylist"
+msgstr "Add Keylist"
+
+#: main_window.py:262
+msgid ""
+"No updates available.<br><br><span style=\"font-weight:normal;\">Version "
+"{} is the latest version.</span>"
+msgstr ""
+"No updates available.<br><br><span style=\"font-weight:normal;\">Version "
+"{} is the latest version.</span>"
+
+#: main_window.py:271
+msgid "Error checking for updates."
+msgstr "Error checking for updates."
