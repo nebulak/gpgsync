@@ -27,7 +27,7 @@ from .threads import RefresherThread
 from ..keylist import Keylist, RefresherMessageQueue
 import gettext
 
-i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+i18n = gettext.translation('keylist_list', localedir='locales', languages=['en-GB'])
 _ = i18n.gettext
 
 

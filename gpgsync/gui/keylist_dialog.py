@@ -25,7 +25,7 @@ from ..keylist import Keylist, ValidatorMessageQueue
 from .threads import AuthorityKeyValidatorThread
 import gettext
 
-i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+i18n = gettext.translation('keylist_dialog', localedir='locales', languages=['en-GB'])
 _ = i18n.gettext
 
 

@@ -22,7 +22,7 @@ import platform
 from PyQt5 import QtCore, QtWidgets, QtGui
 import gettext
 
-i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+i18n = gettext.translation('gui_common', localedir='locales', languages=['en-GB'])
 _ = i18n.gettext
 
 # macOS only

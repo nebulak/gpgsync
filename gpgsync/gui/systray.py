@@ -22,7 +22,7 @@ import queue
 from PyQt5 import QtCore, QtWidgets
 import gettext
 
-i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+i18n = gettext.translation('systray', localedir='locales', languages=['en-GB'])
 _ = i18n.gettext
 
 

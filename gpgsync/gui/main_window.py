@@ -29,7 +29,7 @@ from .keylist_list import KeylistList
 from .threads import RefresherThread
 import gettext
 
-i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+i18n = gettext.translation('main_window', localedir='locales', languages=['en-GB'])
 _ = i18n.gettext
 
 
