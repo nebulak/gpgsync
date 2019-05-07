@@ -27,6 +27,10 @@ from .settings_dialog import SettingsDialog
 from .keylist_dialog import KeylistDialog
 from .keylist_list import KeylistList
 from .threads import RefresherThread
+import gettext
+
+i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+_ = i18n.gettext
 
 
 class MainWindow(QtWidgets.QMainWindow):

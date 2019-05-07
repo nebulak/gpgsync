@@ -23,6 +23,10 @@ from PyQt5 import QtCore, QtWidgets
 
 from .gui_common import GuiCommon
 from .main_window import MainWindow
+import gettext
+
+i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+_ = i18n.gettext
 
 
 class Application(QtWidgets.QApplication):

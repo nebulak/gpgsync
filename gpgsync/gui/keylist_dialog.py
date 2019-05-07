@@ -23,6 +23,10 @@ from PyQt5 import QtCore, QtWidgets, QtGui
 
 from ..keylist import Keylist, ValidatorMessageQueue
 from .threads import AuthorityKeyValidatorThread
+import gettext
+
+i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+_ = i18n.gettext
 
 
 class KeylistDialog(QtWidgets.QDialog):

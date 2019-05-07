@@ -19,6 +19,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from PyQt5 import QtCore, QtWidgets, QtGui
+import gettext
+
+i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+_ = i18n.gettext
 
 
 class SettingsDialog(QtWidgets.QDialog):

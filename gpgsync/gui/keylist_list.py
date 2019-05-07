@@ -25,6 +25,10 @@ from PyQt5 import QtCore, QtWidgets, QtGui
 from .keylist_dialog import KeylistDialog
 from .threads import RefresherThread
 from ..keylist import Keylist, RefresherMessageQueue
+import gettext
+
+i18n = gettext.translation('skill', localedir='locales', languages=['en-GB'])
+_ = i18n.gettext
 
 
 class KeylistList(QtWidgets.QWidget):
