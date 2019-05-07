@@ -35,36 +35,36 @@ class KeylistDialog(QtWidgets.QDialog):
         # If keylist == None, this is an add keylist dialog. Otherwise, this
         # is an edit keylist dialog
         if keylist:
-            self.setWindowTitle('Edit Keylist')
+            self.setWindowTitle(_('Edit Keylist'))
             self.keylist = keylist
             self.new_keylist = False
         else:
-            self.setWindowTitle('Add Keylist')
+            self.setWindowTitle(_('Add Keylist'))
             self.keylist = Keylist(self.c)
             self.new_keylist = True
         self.setWindowIcon(self.c.gui.icon)
         self.setMinimumWidth(400)
 
         # Authority key fingerprint
-        fingerprint_label = QtWidgets.QLabel("Authority Key Fingerprint")
+        fingerprint_label = QtWidgets.QLabel(_("Authority Key Fingerprint"))
         self.fingerprint_edit = QtWidgets.QLineEdit()
 
         # Keylist Address
-        url_label = QtWidgets.QLabel("Keylist Address")
+        url_label = QtWidgets.QLabel(_("Keylist Address"))
         self.url_edit = QtWidgets.QLineEdit()
         self.url_edit.setPlaceholderText("https://")
 
         # Keyserver
-        keyserver_label = QtWidgets.QLabel("Key server")
+        keyserver_label = QtWidgets.QLabel(_("Key server"))
         self.keyserver_edit = QtWidgets.QLineEdit()
 
         # SOCKS5 proxy settings
         self.use_proxy = QtWidgets.QCheckBox()
-        self.use_proxy.setText("Load URL through SOCKS5 proxy (e.g. Tor)")
+        self.use_proxy.setText(_("Load URL through SOCKS5 proxy (e.g. Tor)"))
         self.use_proxy.setCheckState(QtCore.Qt.Unchecked)
-        proxy_host_label = QtWidgets.QLabel('Host')
+        proxy_host_label = QtWidgets.QLabel(_('Host'))
         self.proxy_host_edit = QtWidgets.QLineEdit()
-        proxy_port_label = QtWidgets.QLabel('Port')
+        proxy_port_label = QtWidgets.QLabel(_('Port'))
         self.proxy_port_edit = QtWidgets.QLineEdit()
         proxy_hlayout = QtWidgets.QHBoxLayout()
         proxy_hlayout.addWidget(proxy_host_label)
@@ -74,7 +74,7 @@ class KeylistDialog(QtWidgets.QDialog):
         proxy_vlayout = QtWidgets.QVBoxLayout()
         proxy_vlayout.addWidget(self.use_proxy)
         proxy_vlayout.addLayout(proxy_hlayout)
-        proxy_group = QtWidgets.QGroupBox("Proxy Configuration")
+        proxy_group = QtWidgets.QGroupBox(_("Proxy Configuration"))
         proxy_group.setLayout(proxy_vlayout)
 
         # Advanced settings button
@@ -88,13 +88,13 @@ class KeylistDialog(QtWidgets.QDialog):
         advanced_layout.addWidget(keyserver_label)
         advanced_layout.addWidget(self.keyserver_edit)
         advanced_layout.addWidget(proxy_group)
-        self.advanced_group = QtWidgets.QGroupBox("Advanced Settings")
+        self.advanced_group = QtWidgets.QGroupBox(_("Advanced Settings"))
         self.advanced_group.setLayout(advanced_layout)
 
         # Buttons
-        self.save_button = QtWidgets.QPushButton("Save")
+        self.save_button = QtWidgets.QPushButton(_("Save"))
         self.save_button.clicked.connect(self.save_clicked)
-        self.cancel_button = QtWidgets.QPushButton("Cancel")
+        self.cancel_button = QtWidgets.QPushButton(_("Cancel"))
         self.cancel_button.clicked.connect(self.cancel_clicked)
         buttons_layout = QtWidgets.QHBoxLayout()
         buttons_layout.addStretch()
@@ -130,10 +130,10 @@ class KeylistDialog(QtWidgets.QDialog):
 
     def toggle_advanced(self):
         if self.advanced_group.isHidden():
-            self.advanced_button.setText("Hide advanced settings")
+            self.advanced_button.setText(_("Hide advanced settings"))
             self.advanced_group.show()
         else:
-            self.advanced_button.setText("Show advanced settings")
+            self.advanced_button.setText(_("Show advanced settings"))
             self.advanced_group.hide()
 
         self.adjustSize()
@@ -184,11 +184,11 @@ class ValidatorDialog(QtWidgets.QDialog):
         super(ValidatorDialog, self).__init__()
         self.c = common
 
-        self.setWindowTitle('Adding Keylist')
+        self.setWindowTitle(_('Adding Keylist'))
         self.setWindowIcon(self.c.gui.icon)
 
         # Label
-        self.label = QtWidgets.QLabel("Downloading keylist and authority key...")
+        self.label = QtWidgets.QLabel(_("Downloading keylist and authority key..."))
 
         # Layout
         layout = QtWidgets.QVBoxLayout()

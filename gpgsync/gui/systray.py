@@ -34,24 +34,24 @@ class SysTray(QtWidgets.QSystemTrayIcon):
         super(SysTray, self).__init__(common.gui.systray_icon)
         self.c = common
 
-        self.show_text = 'Show GPG Sync'
-        self.hide_text = 'Hide GPG Sync'
+        self.show_text = _('Show GPG Sync')
+        self.hide_text = _('Hide GPG Sync')
 
         # Menu
         self.menu = QtWidgets.QMenu()
-        self.version_info = self.menu.addAction('Version {}'.format(version))
+        self.version_info = self.menu.addAction(_('Version {}').format(version))
         self.version_info.setEnabled(False)
         self.show_act = self.menu.addAction(self.show_text)
         self.show_act.triggered.connect(self.clicked_show)
-        self.refresh_act = self.menu.addAction('Sync keylists')
+        self.refresh_act = self.menu.addAction(_('Sync keylists'))
         self.refresh_act.triggered.connect(self.clicked_refresh)
         if self.c.os != 'Linux':
-            self.update_act = self.menu.addAction('Check for updates')
+            self.update_act = self.menu.addAction(_('Check for updates'))
             self.update_act.triggered.connect(self.clicked_update_now)
-        self.settings_window = self.menu.addAction('Settings...')
+        self.settings_window = self.menu.addAction(_('Settings...'))
         self.settings_window.triggered.connect(self.clicked_settings)
         self.menu.addSeparator()
-        self.quit_act = self.menu.addAction('Quit')
+        self.quit_act = self.menu.addAction(_('Quit'))
         self.quit_act.triggered.connect(self.clicked_quit)
 
         self.setContextMenu(self.menu)

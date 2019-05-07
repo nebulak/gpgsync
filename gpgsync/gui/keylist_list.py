@@ -99,19 +99,19 @@ class KeylistWidget(QtWidgets.QWidget):
         self.progress_bar.hide()
 
         # Buttons
-        self.info_button = QtWidgets.QPushButton("Info")
+        self.info_button = QtWidgets.QPushButton(_("Info"))
         self.info_button.clicked.connect(self.details_clicked)
         self.info_button.setStyleSheet(self.c.gui.css['KeylistWidget button'])
-        self.sync_button = QtWidgets.QPushButton("Sync Now")
+        self.sync_button = QtWidgets.QPushButton(_("Sync Now"))
         self.sync_button.clicked.connect(self.sync_clicked)
         self.sync_button.setStyleSheet(self.c.gui.css['KeylistWidget button'])
-        self.edit_button = QtWidgets.QPushButton("Edit")
+        self.edit_button = QtWidgets.QPushButton(_("Edit"))
         self.edit_button.clicked.connect(self.edit_clicked)
         self.edit_button.setStyleSheet(self.c.gui.css['KeylistWidget button'])
-        self.delete_button = QtWidgets.QPushButton("Delete")
+        self.delete_button = QtWidgets.QPushButton(_("Delete"))
         self.delete_button.clicked.connect(self.delete_clicked)
         self.delete_button.setStyleSheet(self.c.gui.css['KeylistWidget button'])
-        self.cancel_sync_button = QtWidgets.QPushButton("Cancel Sync")
+        self.cancel_sync_button = QtWidgets.QPushButton(_("Cancel Sync"))
         self.cancel_sync_button.clicked.connect(self.cancel_sync_clicked)
         self.cancel_sync_button.setStyleSheet(self.c.gui.css['KeylistWidget button'])
 
@@ -142,9 +142,9 @@ class KeylistWidget(QtWidgets.QWidget):
     def details_clicked(self):
         self.c.log("KeylistWidget", "details_clicked")
         if self.keylist.error:
-            self.c.gui.alert("Sync error:\n\n{}".format(self.keylist.error), icon=QtWidgets.QMessageBox.Critical)
+            self.c.gui.alert(_("Sync error:\n\n{}").format(self.keylist.error), icon=QtWidgets.QMessageBox.Critical)
         elif self.keylist.warning:
-            self.c.gui.alert("Sync warning:\n\n{}".format(self.keylist.warning), icon=QtWidgets.QMessageBox.Warning)
+            self.c.gui.alert(_("Sync warning:\n\n{}").format(self.keylist.warning), icon=QtWidgets.QMessageBox.Warning)
 
     def sync_clicked(self):
         self.c.log("KeylistWidget", "sync_clicked")
@@ -158,7 +158,7 @@ class KeylistWidget(QtWidgets.QWidget):
 
     def cancel_sync_clicked(self):
         self.c.log("KeylistWidget", "cancel_sync_clicked")
-        self.cancel_sync_button.setText("Canceling...")
+        self.cancel_sync_button.setText(_("Canceling..."))
         self.cancel_sync_button.setEnabled(False)
         self.keylist.refresher.cancel_early()
 
@@ -171,7 +171,7 @@ class KeylistWidget(QtWidgets.QWidget):
     def delete_clicked(self):
         self.c.log("KeylistWidget", "delete_clicked")
         uid = self.c.gpg.get_uid(self.keylist.fingerprint)
-        alert_text = "Are you sure you want to delete this keylist?<br><br><b>{}</b>".format(uid)
+        alert_text = _("Are you sure you want to delete this keylist?<br><br><b>{}</b>").format(uid)
         reply = self.c.gui.alert(alert_text, icon=QtWidgets.QMessageBox.Critical, question=True)
         if reply == 0:
             # Delete
@@ -188,7 +188,7 @@ class KeylistWidget(QtWidgets.QWidget):
             self.edit_button.hide()
             self.delete_button.hide()
 
-            self.status_label.setText("Syncing now...")
+            self.status_label.setText(_("Syncing now..."))
             self.status_label.setStyleSheet(self.c.gui.css['KeylistWidget status_label'])
 
             # Process the last event in the LIFO queue, ignore the rest
@@ -220,14 +220,14 @@ class KeylistWidget(QtWidgets.QWidget):
 
             # Update status label and css
             if self.keylist.error:
-                status_text = 'Error syncing'
+                status_text = _('Error syncing')
                 status_css = self.c.gui.css['KeylistWidget status_label_error']
             else:
                 if self.keylist.last_synced:
                     status = self.keylist.last_synced.strftime("%B %d, %I:%M %p")
                 else:
-                    status = "Never"
-                status_text = "Synced {}".format(status)
+                    status = _("Never")
+                status_text = _("Synced {}").format(status)
                 if self.keylist.warning:
                     status_css = self.c.gui.css['KeylistWidget status_label_warning']
                 else:

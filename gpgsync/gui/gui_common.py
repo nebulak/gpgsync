@@ -117,8 +117,8 @@ class GuiCommon(object):
             d.setDetailedText(details)
 
         if question:
-            yes_button = d.addButton("Yes", QtWidgets.QMessageBox.YesRole)
-            cancel_button = d.addButton("Cancel", QtWidgets.QMessageBox.NoRole)
+            yes_button = d.addButton(_("Yes"), QtWidgets.QMessageBox.YesRole)
+            cancel_button = d.addButton(_("Cancel"), QtWidgets.QMessageBox.NoRole)
             d.setDefaultButton(cancel_button)
 
         d.setIcon(icon)
@@ -127,12 +127,12 @@ class GuiCommon(object):
     def update_alert(self, curr_version, latest_version, url):
         d = QtWidgets.QMessageBox()
         d.setWindowTitle('GPG Sync')
-        d.setText('GPG Sync v{} is now available.<span style="font-weight:normal;">' \
+        d.setText(_('GPG Sync v{} is now available.<span style="font-weight:normal;">' \
                   '<br><br>You are currently running v{}. Click Update to' \
-                  ' download the latest version </span>'.format(latest_version, curr_version))
+                  ' download the latest version </span>').format(latest_version, curr_version))
 
-        d.addButton(QtWidgets.QPushButton('Cancel'), QtWidgets.QMessageBox.NoRole)
-        d.addButton(QtWidgets.QPushButton('Update'), QtWidgets.QMessageBox.YesRole)
+        d.addButton(QtWidgets.QPushButton(_('Cancel')), QtWidgets.QMessageBox.NoRole)
+        d.addButton(QtWidgets.QPushButton(_('Update')), QtWidgets.QMessageBox.YesRole)
 
         d.setIconPixmap(QtGui.QPixmap(self.c.get_resource_path('gpgsync.png')))
         res = d.exec_()

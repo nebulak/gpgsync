@@ -46,11 +46,11 @@ class MainWindow(QtWidgets.QMainWindow):
         # Make sure gpg is available
         if not self.c.gpg.is_gpg_available():
             if self.c.os == 'Linux':
-                self.c.gui.alert('GnuPG 2.x doesn\'t seem to be installed. Install your operating system\'s gnupg2 package.')
+                self.c.gui.alert(_('GnuPG 2.x doesn\'t seem to be installed. Install your operating system\'s gnupg2 package.'))
             if self.c.os == 'Darwin':
-                self.c.gui.alert('GnuPG doesn\'t seem to be installed. Install <a href="https://gpgtools.org/">GPGTools</a>.')
+                self.c.gui.alert(_('GnuPG doesn\'t seem to be installed. Install <a href="https://gpgtools.org/">GPGTools</a>.'))
             if self.c.os == 'Windows':
-                self.c.gui.alert('GnuPG doesn\'t seem to be installed. Install <a href="http://gpg4win.org/">Gpg4win</a>.')
+                self.c.gui.alert(_('GnuPG doesn\'t seem to be installed. Install <a href="http://gpg4win.org/">Gpg4win</a>.'))
             sys.exit()
 
         # Initialize keylists
@@ -183,10 +183,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Add button
         if len(self.c.settings.keylists) == 0:
-            self.add_button.setText("Add First GPG Sync Keylist")
+            self.add_button.setText(_("Add First GPG Sync Keylist"))
             self.add_button.setStyleSheet(self.c.gui.css['MainWindow add_button_first'])
         else:
-            self.add_button.setText("Add Keylist")
+            self.add_button.setText(_("Add Keylist"))
             self.add_button.setStyleSheet(self.c.gui.css['MainWindow add_button'])
 
         # Add or delete keylists, if necessary
@@ -259,7 +259,7 @@ class MainWindow(QtWidgets.QMainWindow):
                         self.saved_update_version = latest_version
                 elif self.c.version >= latest_version and force:
                     self.show_main_window()
-                    self.c.gui.alert('No updates available.<br><br><span style="font-weight:normal;">Version {} is the latest version.</span>'.format(latest_version))
+                    self.c.gui.alert(_('No updates available.<br><br><span style="font-weight:normal;">Version {} is the latest version.</span>').format(latest_version))
                 self.c.settings.last_update_check_err = False
             elif release and 'tag_name' not in release:
                 if not self.c.settings.last_update_check_err or force:
@@ -268,7 +268,7 @@ class MainWindow(QtWidgets.QMainWindow):
                     for key, val in release.items():
                         details += '{}: {}\n\n'.format(key, val)
 
-                    self.c.gui.alert('Error checking for updates.', details)
+                    self.c.gui.alert(_('Error checking for updates.'), details)
                 self.c.settings.last_update_check_err = True
 
             self.c.settings.last_update_check = datetime.datetime.now()
